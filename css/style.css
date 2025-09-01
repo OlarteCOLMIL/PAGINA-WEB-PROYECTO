@@ -1,7 +1,81 @@
-
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    margin: 0;
     font-family: sans-serif;
+    color: #102418;
+    background: #fff;
+}
+
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 16px 12px;
+    border-bottom: 1px solid #e9f3ee;
+    background: #fff;
+    color: #102418;
+}
+
+header a {
+    color: inherit;
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: 700;
+    padding: 6px 4px;
+    line-height: 1.2;
+    cursor: pointer;
+}
+
+header a:hover,
+header a:focus-visible,
+header a:active {
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    text-decoration-thickness: 3px;
+}
+
+header a:visited {
+    color: inherit;
+}
+
+#inicio {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    align-items: center;
+    padding: 64px 20px;
+    background: linear-gradient(180deg, #ffffff 0%, #f2fff7 100%);
+}
+
+#inicio h1 {
+    font-size: clamp(2rem, 3.2vw + 1rem, 3.5rem);
+    line-height: 1.1;
+    margin: 0;
+}
+
+#inicio video {
+    width: 100%;
+    max-width: 720px;
+    height: auto;
+    display: block;
+    border-radius: 16px;
+    border: 2px solid rgba(29, 233, 95, .35);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, .15);
+}
+
+@media (max-width: 480px) {
+    header {
+        gap: 20px;
+        padding: 12px;
+    }
+
+    header a {
+        font-size: 22px;
+    }
 }
