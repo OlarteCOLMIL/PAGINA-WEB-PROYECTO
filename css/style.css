@@ -17,7 +17,7 @@ header {
     gap: 40px;
     padding: 16px 12px;
     border-bottom: 1px solid #e9f3ee;
-    background: #fff;
+    background: #1ba00070;
     color: #102418;
 }
 
@@ -66,7 +66,7 @@ header a:visited {
 .video-ancho {
     width: 100%;
     aspect-ratio: 16 / 9;
-    background: #000;
+    background: #ffffff;
     border: 2px solid #1DE95F;
     border-radius: 12px;
     overflow: hidden;
@@ -78,17 +78,63 @@ header a:visited {
     height: 100%;
     display: block;
     object-fit: contain;
+    background: #ffffff;
+}
+
+
+#destacado {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    align-items: center;
+    padding: 64px 20px;
+    max-width: 1100px;
+    margin: -20vw;
+    margin-left: 5vw;
+}
+
+#destacado h2 {
+    font-size: 3rem;
+    line-height: 1.1;
+    margin: 0 0 .5rem 0;
+}
+
+#destacado p {
+    margin: 0;
+    color: #3c5a49;
+    max-width: 46ch;
+}
+
+.video-ancho {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: #000;
+    border: 2px solid #1DE95F;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.video-ancho video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
     background: #000;
 }
 
 
-@media (max-width: 480px) {
-    header {
-        gap: 20px;
-        padding: 12px;
+@media (max-width: 900px) {
+    #destacado {
+        grid-template-columns: 1fr;
+        text-align: center;
     }
 
-    header a {
-        font-size: 22px;
+    #destacado .video-ancho {
+        margin: 0 auto 12px;
+    }
+
+    #destacado p {
+        margin: 0 auto;
     }
 }
