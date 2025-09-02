@@ -167,8 +167,10 @@ header a:visited {
     color: #103a22;
 }
 
-
 #plantas li:hover {
     border-color: #1DE95F;
 }
 
+html, body { max-width: 100%; overflow-x: hidden; }
+#destacado > * { min-width: 0; overflow-wrap: anywhere; }
+img, svg, video, canvas, iframe { max-width: 100%; height: auto; display: block; }
