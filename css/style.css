@@ -50,24 +50,37 @@ header a:visited {
     gap: 24px;
     align-items: center;
     padding: 64px 20px;
-    background: linear-gradient(180deg, #ffffff 0%, #f2fff7 100%);
+    max-width: 1100px;
+    margin: 0 auto;
 }
+
 
 #inicio h1 {
-    font-size: clamp(2rem, 3.2vw + 1rem, 3.5rem);
+    font-size: clamp(2rem, 3vw + 1rem, 3rem);
     line-height: 1.1;
     margin: 0;
+    max-width: 38ch;
 }
 
-#inicio video {
+
+.video-ancho {
     width: 100%;
-    max-width: 720px;
-    height: auto;
-    display: block;
-    border-radius: 16px;
-    border: 2px solid rgba(29, 233, 95, .35);
-    box-shadow: 0 12px 28px rgba(0, 0, 0, .15);
+    aspect-ratio: 16 / 9;
+    background: #000;
+    border: 2px solid #1DE95F;
+    border-radius: 12px;
+    overflow: hidden;
 }
+
+
+.video-ancho video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+    background: #000;
+}
+
 
 @media (max-width: 480px) {
     header {
