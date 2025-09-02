@@ -123,52 +123,109 @@ header a:visited {
     background: #000;
 }
 
-#plantas{
-  padding: 64px 20px;
-  max-width: 1100px;
-  margin: 0 auto;
+#plantas {
+    padding: 64px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
-#plantas h2{
-  font-size: clamp(1.8rem, 2.4vw + 1rem, 2.6rem);
-}
-
-
-#plantas .catalogo{
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-}
-
-#plantas li{
-  border: 1px solid #e5eee9;
-  border-radius: 12px;
-  background: #fff;
-  overflow: hidden;
+#plantas h2 {
+    font-size: clamp(1.8rem, 2.4vw + 1rem, 2.6rem);
 }
 
 
-#plantas img{
-  width: 20vw;
-  height: 25vw;
-  aspect-ratio: 4 / 3;  
-  object-fit: cover;
-  display: block;
+#plantas .catalogo {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+#plantas li {
+    border: 1px solid #e5eee9;
+    border-radius: 12px;
+    background: #fff;
+    overflow: hidden;
 }
 
 
-#plantas figcaption{
-  text-align: center;
-  font-weight: 700;
-  padding: 10px 8px;
-  color: #103a22;
+#plantas img {
+    width: 20vw;
+    height: 25vw;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    display: block;
 }
 
 
-#plantas li:hover{
-  border-color: #1DE95F;         
+#plantas figcaption {
+    text-align: center;
+    font-weight: 700;
+    padding: 10px 8px;
+    color: #103a22;
 }
 
+
+#plantas li:hover {
+    border-color: #1DE95F;
+}
+
+@media (min-width: 1200px) {
+
+    #inicio,
+    #destacado,
+    #plantas {
+        max-width: 1200px;
+    }
+}
+
+
+@media (max-width: 900px) {
+    header {
+        gap: 24px;
+        padding: 12px;
+        flex-wrap: wrap;
+    }
+
+    header a {
+        font-size: 22px;
+    }
+
+    #inicio,
+    #destacado {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 56px 16px;
+    }
+
+    #inicio video,
+    .video-ancho {
+        margin: 0 auto;
+    }
+
+    #plantas .catalogo {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+@media (max-width: 560px) {
+    header {
+        gap: 14px;
+    }
+
+    header a {
+        font-size: 18px;
+    }
+
+    #inicio,
+    #destacado {
+        padding: 44px 14px;
+    }
+
+    #plantas .catalogo {
+        grid-template-columns: 1fr;
+    }
+}
