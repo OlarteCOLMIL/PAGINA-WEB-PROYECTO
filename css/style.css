@@ -9,7 +9,6 @@ body {
     background: #fff;
 }
 
-
 header {
     display: flex;
     justify-content: center;
@@ -44,16 +43,20 @@ header a:visited {
 }
 
 #inicio {
-    min-height: 100vh;
+    min-height: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 24px;
     align-items: center;
-    padding: 64px 20px;
+    padding: 40px 20px;
     max-width: 1100px;
     margin: 0 auto;
 }
 
+#inicio>* {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
 
 #inicio h1 {
     font-size: clamp(2rem, 3vw + 1rem, 3rem);
@@ -62,36 +65,43 @@ header a:visited {
     max-width: 38ch;
 }
 
-
 .video-ancho {
+    position: relative;
     width: 100%;
     aspect-ratio: 16 / 9;
-    background: #ffffff;
+    background: #000;
     border: 2px solid #1DE95F;
     border-radius: 12px;
     overflow: hidden;
 }
 
-
-.video-ancho video {
+.video-ancho video,
+.video-ancho iframe {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     display: block;
     object-fit: contain;
-    background: #ffffff;
+    border: 0;
+    background: #000;
 }
 
-
 #destacado {
-    min-height: 100vh;
+    min-height: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 24px;
     align-items: center;
-    padding: 64px 20px;
+    padding: 40px 20px;
     max-width: 1100px;
-    margin: -20vw;
-    margin-left: 5vw;
+    margin: 0 auto;
+    margin-top: 12px;
+}
+
+#destacado>* {
+    min-width: 0;
+    overflow-wrap: anywhere;
 }
 
 #destacado h2 {
@@ -106,23 +116,6 @@ header a:visited {
     max-width: 46ch;
 }
 
-.video-ancho {
-    width: 100%;
-    aspect-ratio: 16/9;
-    background: #000;
-    border: 2px solid #1DE95F;
-    border-radius: 12px;
-    overflow: hidden;
-}
-
-.video-ancho video {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: contain;
-    background: #000;
-}
-
 #plantas {
     padding: 64px 20px;
     max-width: 1100px;
@@ -132,7 +125,6 @@ header a:visited {
 #plantas h2 {
     font-size: clamp(1.8rem, 2.4vw + 1rem, 2.6rem);
 }
-
 
 #plantas .catalogo {
     list-style: none;
@@ -150,7 +142,6 @@ header a:visited {
     overflow: hidden;
 }
 
-
 #plantas img {
     width: 20vw;
     height: 25vw;
@@ -158,7 +149,6 @@ header a:visited {
     object-fit: cover;
     display: block;
 }
-
 
 #plantas figcaption {
     text-align: center;
@@ -171,6 +161,29 @@ header a:visited {
     border-color: #1DE95F;
 }
 
-html, body { max-width: 100%; overflow-x: hidden; }
-#destacado > * { min-width: 0; overflow-wrap: anywhere; }
-img, svg, video, canvas, iframe { max-width: 100%; height: auto; display: block; }
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+img,
+svg,
+canvas {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 900px) {
+
+    #inicio,
+    #destacado {
+        grid-template-columns: 1fr;
+        padding: 32px 20px;
+    }
+
+    #destacado {
+        margin-top: 8px;
+    }
+}
