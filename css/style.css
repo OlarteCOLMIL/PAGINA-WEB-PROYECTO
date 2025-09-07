@@ -187,3 +187,72 @@ canvas {
         margin-top: 8px;
     }
 }
+
+.sobre,
+.comentarios {
+    padding: 2rem 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.sobre h2,
+.comentarios h2 {
+    margin-bottom: 1rem;
+}
+
+.tarjeta {
+    background: #f6f6f6;
+    padding: 1rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+}
+
+.toc ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: .5rem;
+    padding-left: 1rem;
+}
+
+.toc a {
+    text-decoration: none;
+}
+
+article+article {
+    margin-top: 2rem;
+}
+
+details {
+    background: #fafafa;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: .75rem 1rem;
+    margin: .75rem 0;
+}
+
+.form-comentarios {
+    display: grid;
+    gap: .75rem;
+    max-width: 640px;
+}
+
+.form-comentarios input,
+.form-comentarios textarea {
+    width: 100%;
+    padding: .6rem .75rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.form-comentarios button {
+    padding: .6rem 1rem;
+    border: 0;
+    border-radius: 8px;
+    background: #2e7d32;
+    color: #fff;
+    cursor: pointer;
+}
+
+.form-comentarios button:hover {
+    filter: brightness(1.05);
+}
