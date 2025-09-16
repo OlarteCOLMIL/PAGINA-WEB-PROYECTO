@@ -19,6 +19,9 @@ header {
     background: #1ba00070;
     color: #102418;
 }
+.logito{
+    width: 10vw;
+}
 
 header a {
     color: inherit;
