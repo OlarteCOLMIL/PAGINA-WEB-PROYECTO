@@ -256,3 +256,46 @@ details {
 .form-comentarios button:hover {
     filter: brightness(1.05);
 }
+
+#contacto.contacto {
+    padding: 40px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+#contacto h2 {
+    margin-top: 0;
+    font-size: clamp(1.5rem, 2.4vw, 2rem);
+}
+
+.contact-card {
+    background: #f6fbf7;
+    border: 1px solid #cfe7d3;
+    border-radius: 14px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+}
+
+.contact-info h3 {
+    margin: 0 0 6px 0;
+    font-size: 1.2rem;
+}
+
+.contact-info p {
+    margin: 0 0 10px 0;
+}
+
+.actions .btn-whatsapp {
+    display: inline-block;
+    padding: .6rem 1rem;
+    border-radius: 10px;
+    background: #25D366;
+    color: #fff;
+    text-decoration: none;
+}
+
+.actions .btn-whatsapp:hover {
+    filter: brightness(1.05);
+}
